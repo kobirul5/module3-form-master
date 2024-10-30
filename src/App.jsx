@@ -1,33 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const handleSubmit = e => {
+    e.preventDefault()
+    console.log(e.target.name.value)
+    console.log(e.target.email.value)
+    console.log(e.target.phone.value)
+    console.log("submit button")
+  }
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1 className='text-4xl'>Create Form</h1>
+      <form onSubmit={handleSubmit}>
+        <input className='input border  mb-5 bg-gray-200' type="text" name="name" /> <br />
+        <input className='input border mb-5 bg-gray-200' type="email" name="email" /> <br />
+        <input className='input border mb-5 bg-gray-200' type="number" name="phone" /> <br />
+        <button className='btn'>Submit</button>
+      </form>
+      
     </>
   )
 }
