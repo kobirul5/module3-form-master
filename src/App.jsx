@@ -1,7 +1,8 @@
 
 import './App.css'
+import RefForm from './components/RefFrom/RefForm'
 // import SimpleForm from './components/SimpleForm/SimpleForm'
-import StateFulForm from './components/StateFulForm/StateFulForm'
+// import StateFulForm from './components/StateFulForm/StateFulForm'
 
 function App() {
   
@@ -10,7 +11,8 @@ function App() {
     <>
       <h1 className='text-4xl'>Create Form</h1>
       {/* <SimpleForm></SimpleForm> */}
-      <StateFulForm></StateFulForm>
+      {/* <StateFulForm></StateFulForm> */}
+      <RefForm></RefForm>
       
     </>
   )
